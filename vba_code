@@ -1,0 +1,27 @@
+Sub Check()
+    Dim sheet1 As Worksheet, sheet2 As Worksheet
+    Dim cell1 As Range, cell2 As Range
+    Dim trueListVals As Range
+    Dim wrongPlace As Variant
+    
+    Set sheet1 = ThisWorkbook.Sheets("Test")
+    Set sheet2 = ThisWorkbook.Sheets("True")
+    
+    Set trueListVals = sheet2.Range("C2:C11")
+    
+    For Each cell1 In sheet1.Range("C2:C11")
+        Set cell2 = sheet2.Range(cell1.Address)
+        
+        If LCase(cell1.Value) = LCase(cell2.Value) Then
+            cell1.Interior.Color = RGB(108, 169, 101) ' GREEN
+        Else
+            If Not IsError(Application.Match(cell1.Value, trueListVals, 0)) Then
+                cell1.Interior.Color = RGB(200, 182, 83) ' YELLOW
+            Else
+                cell1.Interior.Color = RGB(120, 124, 127) ' GREY
+            End If
+            
+        End If
+    Next cell1
+
+End Sub
