@@ -1,5 +1,5 @@
 # topleGame
-**Tople** is a variation of *-le games*, optimised to Excel and Google Sheets. Here u have a "TRUE" list where your partner must put some top. While u must guess all the places in this top in the "TEST" list\
+**Tople** is a variation of *-le games*, optimised to Excel and Google Sheets. Here u have a "TRUE" list where your partner must put some top. While u must guess all the places in this top in the "TEST" list
 
 In *Google Sheets* document u must add a document, then go to extensions - Apps Script, and paste code.gs here\
 ![The look of the app in Google Sheets](/gs_pic.PNG "The look of the app in Google Sheets")
